@@ -9,6 +9,8 @@ const sizes = {
     height: window.innerHeight
 }
 
+
+
 // Scene
 const scene = new THREE.Scene()
 
