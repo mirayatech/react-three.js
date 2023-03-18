@@ -16,11 +16,13 @@ const scene = new THREE.Scene();
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshBasicMaterial({ color: "#4281ED" });
 const mesh = new THREE.Mesh(geometry, material);
-// Position
-mesh.position.x = 1;
-mesh.position.y = -0.1;
-mesh.position.z = 1;
 scene.add(mesh);
+
+// Position
+mesh.position.set(0.7, -0.6, 1);
+
+// Scale
+mesh.scale.set(1, 0.5, 1);
 
 // Axes helper
 const axesHelper = new THREE.AxesHelper();
