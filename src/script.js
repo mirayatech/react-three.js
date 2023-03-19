@@ -35,9 +35,7 @@ scene.add(axesHelper);
 
 // Camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
-camera.position.z = 6;
-camera.position.y = 1;
-camera.position.x = 1;
+camera.position.set(1, 1, 6);
 
 scene.add(camera);
 
