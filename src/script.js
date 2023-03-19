@@ -1,5 +1,4 @@
 import * as THREE from "three";
-
 // Canvas
 const canvas = document.querySelector(".webgl");
 
@@ -16,7 +15,7 @@ const sizes = {
 const group = new THREE.Group();
 group.position.set(0, 1, 0);
 group.scale.y = 2;
-group.rotation.y = 1;
+group.rotation.y = 0.8;
 scene.add(group);
 
 //cube 1
