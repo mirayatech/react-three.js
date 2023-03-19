@@ -54,4 +54,17 @@ scene.add(camera);
 // Renderer
 const renderer = new THREE.WebGLRenderer({ canvas });
 renderer.setSize(sizes.width, sizes.height);
-renderer.render(scene, camera);
+
+// Animations
+const tick = () => {
+  // Object
+  cube1.rotation.y += 0.01;
+  cube2.rotation.y -= 0.06;
+
+  // Render
+  renderer.render(scene, camera);
+
+  window.requestAnimationFrame(tick);
+};
+
+tick();
