@@ -55,11 +55,18 @@ scene.add(camera);
 const renderer = new THREE.WebGLRenderer({ canvas });
 renderer.setSize(sizes.width, sizes.height);
 
+const clock = new THREE.Clock();
+
 // Animations
 const tick = () => {
+  // Clock
+  const elapsedTime = clock.getElapsedTime();
+  console.log(elapsedTime);
+
   // Object
-  cube1.rotation.y += 0.01;
-  cube2.rotation.y -= 0.06;
+  cube1.rotation.y = elapsedTime * Math.PI * 2;
+  cube2.position.y = Math.sin(elapsedTime);
+  camera.lookAt(cube2.position);
 
   // Render
   renderer.render(scene, camera);
