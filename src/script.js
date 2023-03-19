@@ -24,6 +24,11 @@ mesh.position.set(0.7, -0.6, 1);
 // Scale
 mesh.scale.set(1, 0.5, 1);
 
+// Rotation
+mesh.rotation.reorder("YXZ");
+mesh.rotation.x = Math.PI * 0.25;
+mesh.rotation.y = Math.PI * 0.25;
+
 // Axes helper
 const axesHelper = new THREE.AxesHelper();
 scene.add(axesHelper);
